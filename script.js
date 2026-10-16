@@ -9,8 +9,8 @@ const IMAGENES = [
 
 // Pon aquí IDs de videos de YouTube (la parte después de ?v=)
 const VIDEOS = [
-  { titulo: "Video oficial", id: "dQw4w9WgXcQ" },
-  { titulo: "Live / Performance", id: "dQw4w9WgXcQ" }
+  { titulo: "EN ODIO", id: "UuZFVAFouuk" },
+  { titulo: "LEX LUTHOR", id: "kuBUKVrObkM" }
 ];
 
 const TEMAS = ["Modo Diablo - Intro", "Modo Diablo - Fuego", "Modo Diablo - Ft. YSY A", "Modo Diablo - Ft. Neo Pistea"];
