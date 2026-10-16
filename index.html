@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duki - Fan Page</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">DUKI</div>
+  <ul>
+    <li><a href="#bio">Bio</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#modo">Modo Diablo</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#collabs">Colabs</a></li>
+    <li><a href="#player">Player</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <span class="flame">🔥</span><span class="flame">🔥</span><span class="flame">🔥</span>
+  <h1>DUKI</h1>
+  <p>El rey del trap argentino. Fuego, flow y actitud en cada tema.</p>
+  <a href="#modo" class="btn">Escuchar Modo Diablo</a>
+</header>
+
+<!-- BIO -->
+<section id="bio" class="bio">
+  <div>
+    <img id="fotoBio" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Duki_2019.jpg/640px-Duki_2019.jpg" alt="Duki"
+         onerror="this.outerHTML='<div class=&quot;img-fallback&quot;>DUKI</div>'">
+  </div>
+  <div>
+    <h2 class="titulo" style="text-align:left;font-size:3rem;">Biografía</h2>
+    <p>Duki es uno de los artistas más influyentes del trap en Argentina y Latinoamérica. Con un estilo crudo, letras directas y una presencia escénica explosiva, se convirtió en referente de toda una generación.</p>
+    <p>Sus shows, colaboraciones y lanzamientos lo llevaron a llenar estadios y a romper récords de streaming en la región.</p>
+    <div class="stats">
+      <div class="stat"><b>🔥</b><span>Trap Argentino</span></div>
+      <div class="stat"><b>🎤</b><span>Flow Único</span></div>
+      <div class="stat"><b>👑</b><span>Rey del Género</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <h2 class="titulo">Galería</h2>
+  <div class="galeria" id="galeriaGrid"></div>
+</section>
+
+<!-- MODO DIABLO -->
+<section id="modo" class="modo-diablo">
+  <h2>MODO DIABLO</h2>
+  <p style="margin-top:14px;font-size:1.2rem;color:#ffd6ea;">Un proyecto de fuego con invitados de otro nivel</p>
+  <div class="feat-list">
+    <div class="feat">YSY A<small>Feat. especial</small></div>
+    <div class="feat">NEO PISTEA<small>Feat. especial</small></div>
+    <div class="feat">DUKI<small>Artista principal</small></div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <h2 class="titulo">Videos</h2>
+  <div class="videos" id="videosGrid"></div>
+</section>
+
+<!-- COLABORACIONES -->
+<section id="collabs" style="background:#14101f;">
+  <h2 class="titulo">Colaboraciones</h2>
+  <div class="collabs">
+    <div class="collab" onclick="mostrarInfo('C.R.O', 'Colaboración de la escena trap con toda la energía de Duki.')">
+      <div class="avatar">C.R.O</div>
+      <h3>C.R.O</h3>
+      <p>Haz clic para ver más</p>
+    </div>
+    <div class="collab" onclick="mostrarInfo('KHEA', 'Uno de los nombres fuertes del rap argentino, siempre con Duki.')">
+      <div class="avatar">KHEA</div>
+      <h3>Khea</h3>
+      <p>Haz clic para ver más</p>
+    </div>
+    <div class="collab" onclick="mostrarInfo('YSY A', 'Artista de la escena que vibra con Duki en Modo Diablo.')">
+      <div class="avatar">YSY A</div>
+      <h3>YSY A</h3>
+      <p>Haz clic para ver más</p>
+    </div>
+    <div class="collab" onclick="mostrarInfo('NEO PISTEA', 'Colaboración explosiva en Modo Diablo.')">
+      <div class="avatar">NEO</div>
+      <h3>Neo Pistea</h3>
+      <p>Haz clic para ver más</p>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYER -->
+<section id="player" class="frase-box">
+  <h2 class="titulo">Player</h2>
+  <div class="player" id="playerBox">
+    <div class="disco"></div>
+    <h3 id="tema">Modo Diablo - Intro</h3>
+    <div class="bars">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="controls">
+      <button onclick="cambiarTema(-1)">⏮</button>
+      <button id="btnPlay" onclick="togglePlay()">▶</button>
+      <button onclick="cambiarTema(1)">⏭</button>
+    </div>
+  </div>
+</section>
+
+<!-- FRASES -->
+<section class="frase-box" style="background: linear-gradient(135deg, #2b0a1e, #0a0a0f);">
+  <h2 class="titulo">Frase del día</h2>
+  <div id="frase">"Fuego en cada verso."</div>
+  <button class="btn btn-alt" onclick="nuevaFrase()">Otra frase 🔥</button>
+</section>
+
+<footer>
+  © Fan page de Duki · Hecho con fuego 🔥 · Modo Diablo activado
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="cerrarLightbox()">
+  <div class="lb-box" onclick="event.stopPropagation()">
+    <h3 id="lbTitulo"></h3>
+    <p id="lbTexto"></p>
+    <button class="btn cerrar" onclick="cerrarLightbox()">Cerrar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
